@@ -2,24 +2,29 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const name = "babli";
+  const data = ["Andorid","BlackBery","iphone","Window Phone"];
+  const data1 = ["Samsung","HTC","MicroMax","Apple"]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 className='head'>Mobile Operating System</h1>
+
+      <ul>
+
+        {data.map((e) => (
+          <li>{e}</li>
+        ))}
+        
+      </ul>
+      <h1>Mobile Manufactures</h1>
+      <ul>
+      {data1.map((e) => (
+          <li>{e}</li>
+        ))}
+      </ul>
     </div>
-  );
+    );
 }
+  
 
 export default App;
